@@ -1,9 +1,7 @@
 const mongoose=require('mongoose');
 mongoose.connect("mongodb://localhost:27017/colegio", {
     useNewUrlParser: true,
-    useCreateIndex: true,
     useUnifiedTopology: true,
-    useFindAndModify: false
 }, (err,res)=>{
     if(err){
         throw err;
@@ -12,4 +10,4 @@ mongoose.connect("mongodb://localhost:27017/colegio", {
     }
 });
 
-module.exports = conn;
+module.exports = mongoose;

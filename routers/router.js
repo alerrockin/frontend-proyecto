@@ -1,8 +1,8 @@
-const { Router, application } = require('express');
+const { Router } = require('express');
+var ControllerCarrera = require("../controllers/ControllerCarrera");
 const router = Router();
 
-var controllerCarrera = require('../controllers/ControllerCarrera');
+router.get("/prueba", ControllerCarrera.prueba);
+router.post('/crear', ControllerCarrera.saveCarrera);
 
-router.get('/prueba', controllerCarrera);
-
-export default router;
+module.exports = router;
